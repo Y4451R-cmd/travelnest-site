@@ -297,6 +297,9 @@ img {
     height: auto;
     border-radius: 16px;
 }
+.hero-right-img {
+    transform: none !important;
+}
 
 #dest-of-the-day {
     padding-top: 2px;
@@ -1316,12 +1319,6 @@ dialog::backdrop {
     font-weight: bold;
     margin-left: 5px;
     margin-bottom: 5px;
-}
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
 }
 
 #check-dest-button {
