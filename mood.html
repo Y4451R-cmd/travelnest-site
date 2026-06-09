@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Set your travel mood with ambient soundscapes and track destinations you have visited or plan to explore with TravelNest.">
+    <title>TravelNest | Mood</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/travelnest-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <audio id="snd-beach" src="audio/beach.mp3" loop></audio>
+    <audio id="snd-forest" src="audio/forest.mp3" loop></audio>
+    <audio id="snd-city" src="audio/city.mp3" loop></audio>
+    <audio id="snd-fire" src="audio/fire.mp3" loop></audio>
+    <audio id="snd-wind" src="audio/wind.mp3" loop></audio>
+    <audio id="snd-cafe" src="audio/cafe.mp3" loop></audio>
+    <header>
+        <nav class="nav-bar grid">
+            <ul class="side-bar">
+                <li class="menu-close-button" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="hideOnDesktop"><a href="index.html">Home</a></li>
+                <li class="hideOnDesktop"><a href="explore.html">Explore</a></li>
+                <li class="hideOnDesktop"><a href="planner.html">Planner</a></li>
+                <li class="hideOnDesktop"><a href="generator.html">Generator</a></li>
+                <li class="hideOnDesktop"><a href="mood.html">Mood</a></li>
+                <li class="hideOnDesktop"><a href="support.html">Support</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#"><img class="tn-logo" alt="TravelNest Logo" src = "images/travelnest-logo.svg"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="explore.html">Explore</a></li>
+                <li class="hideOnMobile"><a href="planner.html">Planner</a></li>
+                <li class="hideOnMobile"><a href="generator.html">Generator</a></li>
+                <li class="hideOnMobile"><a href="mood.html">Mood</a></li>
+                <li class="hideOnMobile"><a href="support.html">Support</a></li>
+                <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="hero" class="grid">
+            <div class="hero-left-text">
+                <p id="hero-left-text-tn">Open Your<span id="nest-text"> Ears</span></p>
+                <h1 id="h1-text">Curate Your <span id="unseen-text">Travel Mood</span></h1>
+                <p id="hero-info">Escape the ordinary through sensory exploration. Set the atmosphere of your next journey with ambient soundscapes and tracked memories.</p>
+            </div>
+            <div class="hero-img-wrapper">
+                <img src = "images/waves.jpg" title="Ocean Waves" alt="Ocean Waves" class="hero-right-img">
+            </div>
+        </div>
+        <p class="mood-heading">Ambient <span class="mood-text">Sounds</span></p>
+        <p class="mood-desc">Set the mood - click to play, click again to stop</p>
+        <div id="mood-container">
+            <div class="mood-card">
+                <img class="mood-img" alt="Beach with Umbrella" src="symbols/beach-with-umbrella-svgrepo-com.svg">
+                <p class="mood-name">Beach Waves</p>
+                <p class="mood-play">Tap to Play</p>
+            </div>
+            <div class="mood-card">
+                <img class="mood-img" alt="Evergreen Tree" src="symbols/evergreen-tree-svgrepo-com.svg">
+                <p class="mood-name">Rain Forest</p>
+                <p class="mood-play">Tap to Play</p>
+            </div>
+            <div class="mood-card">
+                <img class="mood-img" alt="Cityscape at Dusk" src="symbols/cityscape-at-dusk-svgrepo-com.svg">
+                <p class="mood-name">Busy City</p>
+                <p class="mood-play">Tap to Play</p>
+            </div>
+            <div class="mood-card">
+                <img class="mood-img" alt="Fire" src="symbols/fire-svgrepo-com.svg">
+                <p class="mood-name">Fireplace</p>
+                <p class="mood-play">Tap to Play</p>
+            </div>
+            <div class="mood-card">
+                <img class="mood-img" alt="Leaf Fluttering in Wind" src="symbols/leaf-fluttering-in-wind-svgrepo-com.svg">
+                <p class="mood-name">Mountain Wind</p>
+                <p class="mood-play">Tap to Play</p>
+            </div>
+            <div class="mood-card">
+                <img class="mood-img" alt="Hot Beverage" src="symbols/hot-beverage-svgrepo-com.svg">
+                <p class="mood-name">Café Noise</p>
+                <p class="mood-play">Tap to Play</p>
+            </div>
+        </div>
+        <p class="mood-heading">Track your <span class="mood-text">Journeys</span></p>
+        <p class="mood-desc">Mark destinations as visited or planned for your next adventure</p>
+        <div id="track-container">
+            <div class="track-card">
+                <p id="visited-count">0</p>
+                <p id="visited-text">Visited</p>
+            </div>
+            <div class="track-card">
+                <p id="planned-count">0</p>
+                <p id="planned-text">Planned</p>
+            </div>
+            <div class="track-card">
+                <p id="total-track-count">0</p>
+                <p id="total-track-text">Total Tracked</p>
+            </div>
+        </div>
+        <div id="destinations-track-grid"></div>
+    </main>
+    <footer>
+        <hr>
+        <div class="footer-top-container">
+            <div class="footer-top-left">
+                <p id="footer-links-text">Quick Links</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="planner.html">Planner</a></li>
+                    <li><a href="generator.html">Generator</a></li>
+                    <li><a href="mood.html">Mood</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <form class="newsletter">
+                <div class="newsletter-container">
+                    <p id="newsletter-head">Newsletter</p>
+                    <p id="newsletter-p">Get weekly destination inspiration.</p>
+                    <input type="email" id="input-email" name="input-email" class="input" placeholder="Email Address">
+                    <button class="button" id="newsletter-button">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="footer-last-line">
+            <p id="footer-brand">© 2026 TravelNest. All rights reserved.</p>
+            <p>Made with ♥ for the deliberate traveler</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

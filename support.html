@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get help with TravelNest. Send us a message, browse our frequently asked questions, or find other ways to get in touch with our team.">
+    <title>TravelNest | Support</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/travelnest-logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar grid">
+            <ul class="side-bar">
+                <li class="menu-close-button" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="hideOnDesktop"><a href="index.html">Home</a></li>
+                <li class="hideOnDesktop"><a href="explore.html">Explore</a></li>
+                <li class="hideOnDesktop"><a href="planner.html">Planner</a></li>
+                <li class="hideOnDesktop"><a href="generator.html">Generator</a></li>
+                <li class="hideOnDesktop"><a href="mood.html">Mood</a></li>
+                <li class="hideOnDesktop"><a href="support.html">Support</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="#"><img class="tn-logo" alt="TravelNest Logo" src = "images/travelnest-logo.svg"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="explore.html">Explore</a></li>
+                <li class="hideOnMobile"><a href="planner.html">Planner</a></li>
+                <li class="hideOnMobile"><a href="generator.html">Generator</a></li>
+                <li class="hideOnMobile"><a href="mood.html">Mood</a></li>
+                <li class="hideOnMobile"><a href="support.html">Support</a></li>
+                <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="hero" class="grid">
+            <div class="hero-left-text">
+                <p id="hero-left-text-tn">Guided<span id="nest-text"> Navigation</span></p>
+                <h1 id="h1-text">How can we help you<span id="unseen-text"> navigate</span> the world?</h1>
+                <p id="hero-info">Whether your planning your next escape or need assistance with an existing journey, our concierge team is here to curate your experience.</p>
+            </div>
+            <div class="hero-img-wrapper">
+                    <img src = "images/support.jpg" title="Support" alt="Support" class="hero-right-img">
+            </div>
+        </div>
+        <p class="msg-heading" id="send-msg-text">Send us a <span id="msg-text">message</span></p>
+        <p class="msg-para">We'll get back to you within 24 hours</p>
+        <div id="support-grid">
+            <div class="support-container" id="r-support">
+                <div class="r-support-group">
+                    <label class="form-label" for="name-input">Full Name</label><br>
+                    <input id="name-input" class="input" type="text" placeholder="Your full name" autocomplete="off" aria-required="true">
+                </div>
+                <div class="r-support-group">
+                    <label class="form-label" for="email-input">Email Address</label><br>
+                    <input id="email-input" class="input" type="email" placeholder="your@email.com" autocomplete="off" aria-required="true">
+                </div>
+                <div class="r-support-group">
+                    <label class="form-label" for="support-type">Subject</label>
+                    <select id="support-type" class="form-select" aria-label="Select Support Style">
+                        <option value="general">General Enquiry</option>
+                        <option value="bug">Report a bug</option>
+                        <option value="feature-request">Feature Request</option>
+                        <option value="feedback">Share Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="r-support-group">
+                    <label class="form-label" for="msg-input">Message</label><br>
+                    <textarea id="msg-input" class="input" placeholder="Write your message here..." rows="5" aria-required="true"></textarea>
+                </div>
+                <p id="support-confirmation" class="support-confirmation" role="alert"></p>
+                <button class="button" id="support-submit-btn">Send Message</button>
+            </div>
+            <div id="l-support">
+                <p class="msg-heading">Frequently Asked <span id="questions-text">Questions</span></p>
+                <p class="msg-para">Quick answers to common questions</p>
+                <div class="support-container" id="l-support-container">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div id="contacts-container">
+            <p id="contacts-text">Other Ways to Contact <span id="us-text">Us</span></p>
+            <p class="contacts-info" id="contacts-email">email: hello@travelnest.io</p>
+            <p class="contacts-info" id="contacts-media">social media: @TravelNestApp</p>
+            <p class="contacts-info" id="contacts-response-time">Response Time: Within 24 hours</p>
+        </div>
+        <hr>
+        <div class="destinations-quote">
+            <p>"Travel is the only thing you buy that makes you richer."</p>
+            <p>-The TravelNest Philosophy</p>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <div class="footer-top-container">
+            <div class="footer-top-left">
+                <p id="footer-links-text">Quick Links</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="planner.html">Planner</a></li>
+                    <li><a href="generator.html">Generator</a></li>
+                    <li><a href="mood.html">Mood</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <form class="newsletter">
+                <div class="newsletter-container">
+                    <p id="newsletter-head">Newsletter</p>
+                    <p id="newsletter-p">Get weekly destination inspiration.</p>
+                    <input type="email" id="input-email" name="input-email" class="input" placeholder="Email Address">
+                    <button class="button" id="newsletter-button">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="footer-last-line">
+            <p id="footer-brand">© 2026 TravelNest. All rights reserved.</p>
+            <p>Made with ♥ for the deliberate traveler</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
