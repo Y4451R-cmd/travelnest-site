@@ -258,14 +258,14 @@ nav ul {
     overflow: hidden;
 }
 
-.hero-img-wrapper:has(.overlay-text) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-}
-.hero-right-img,.overlay-text {
+.hero-img-wrapper:has(.overlay-text) .hero-right-img,
+.hero-img-wrapper:has(.overlay-text) .overlay-text {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
+}
+.hero-img-wrapper .hero-right-img {
+    width: 100%;
+    display: block;
 }
 .overlay-text {
     background: rgba(255, 255, 255, 0.034); 
@@ -1287,9 +1287,14 @@ dialog::backdrop {
     font-style: italic;
     text-decoration-thickness: 2px;
 }
-.hero-right-img,.overlay-text {
+.hero-img-wrapper:has(.overlay-text) .hero-right-img,
+.hero-img-wrapper:has(.overlay-text) .overlay-text {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
+}
+.hero-img-wrapper .hero-right-img {
+    width: 100%;
+    display: block;
 }
 .overlay-text {
     background: rgba(255, 255, 255, 0.034); 
