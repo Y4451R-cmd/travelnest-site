@@ -519,7 +519,7 @@ document.addEventListener("DOMContentLoaded", function () {
             cardHTML = cardHTML + '<img src="' + dest.img + '" title="' + dest.name + '" alt="' + dest.imgAlt + '" class="destination-img">';
             cardHTML = cardHTML + '<p class="country-continent-text">' + dest.country.toUpperCase() + ' · ' + dest.region.toUpperCase() + '</p>';
             cardHTML = cardHTML + '<p class="destination-name">' + dest.name + '</p>';
-            cardHTML = cardHTML + '<p class="destination-info">' + dest.info.substring(0, 115) + '...</p>';
+            cardHTML = cardHTML + '<p class="destination-info">' + dest.info + '</p>';
 
             card.innerHTML = cardHTML;
             gridContainer.appendChild(card);
